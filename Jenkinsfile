@@ -3,13 +3,13 @@ pipeline{
 
     stages{
         stage('checkout code'){
-            step{
+            steps{
                 echo 'Featching code from git hub'
                 checkout scm
             }
         }
         stage('Run python script'){
-            step{
+            steps{
                 echo 'Runnig python script'
                 sh 'python3 hello.py'
             }
